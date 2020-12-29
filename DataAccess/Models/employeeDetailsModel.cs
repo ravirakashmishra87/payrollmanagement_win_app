@@ -83,7 +83,6 @@ namespace DataAccess.Models
         public decimal ADMN_CHRGS { get; set; }
         public decimal GRAND_TOTAL { get; set; }
         public DateTime PERIOD { get; set; }
-
         public DateTime CREATEDDATE { get; set; }
         public DateTime MODIFIEDDATE { get; set; }
 
