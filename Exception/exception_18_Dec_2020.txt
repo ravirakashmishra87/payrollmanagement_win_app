@@ -1,0 +1,137 @@
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+18/12/2020 11:42:24 AM
+
+MESSAGE : 
+
+Could not find file 'resume'.
+
+Stack Trace:
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   at PayrollerManager.entity.SaveDocument(String sourcefile, String doctype, Int32 userid) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\entity.cs:line 60
+   at PayrollerManager.frmUsersDetails.SaveDocuments(Userdetails user) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmUsersDetails.cs:line 298
+
+Source : 
+
+mscorlib
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+18/12/2020 11:47:30 AM
+
+MESSAGE : 
+
+The process cannot access the file 'D:\Ravi\Personal\MCG\PayrollerManager\Data\Documents\1_resume.doc' because it is being used by another process.
+
+Stack Trace:
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   at PayrollerManager.entity.SaveDocument(String sourcefile, String doctype, Int32 userid) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\entity.cs:line 60
+   at PayrollerManager.frmUsersDetails.SaveDocuments(Userdetails user) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmUsersDetails.cs:line 299
+
+Source : 
+
+mscorlib
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+18/12/2020 11:49:08 AM
+
+MESSAGE : 
+
+The process cannot access the file 'D:\Ravi\Personal\MCG\PayrollerManager\Data\Documents\1_photo.jpg' because it is being used by another process.
+
+Stack Trace:
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   at PayrollerManager.entity.SaveDocument(String sourcefile, String doctype, Int32 userid) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\entity.cs:line 60
+   at PayrollerManager.frmUsersDetails.SaveDocuments(Userdetails user) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmUsersDetails.cs:line 307
+
+Source : 
+
+mscorlib
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+18/12/2020 3:43:49 PM
+
+MESSAGE : 
+
+Input string was not in a correct format.
+
+Stack Trace:
+
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at PayrollerManager.frmUsersDetails.btnSave_Click(Object sender, EventArgs e) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmUsersDetails.cs:line 277
+
+Source : 
+
+mscorlib
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+18/12/2020 3:44:30 PM
+
+MESSAGE : 
+
+Value of '1/1/0001 12:00:00 AM' is not valid for 'Value'. 'Value' should be between 'MinDate' and 'MaxDate'.
+Parameter name: Value
+
+Stack Trace:
+
+   at System.Windows.Forms.DateTimePicker.set_Value(DateTime value)
+   at PayrollerManager.frmUsersDetails.GetGeneralDetails(Int32 userid) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmUsersDetails.cs:line 132
+
+Source : 
+
+System.Windows.Forms
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************

@@ -1,0 +1,104 @@
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+22/12/2020 5:05:07 PM
+
+MESSAGE : 
+
+Value of '1/1/0001 12:00:00 AM' is not valid for 'Value'. 'Value' should be between 'MinDate' and 'MaxDate'.
+Parameter name: Value
+
+Stack Trace:
+
+   at System.Windows.Forms.DateTimePicker.set_Value(DateTime value)
+   at PayrollerManager.frmUsersDetails.GetGeneralDetails(Int32 userid) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmUsersDetails.cs:line 141
+
+Source : 
+
+System.Windows.Forms
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+22/12/2020 5:05:13 PM
+
+MESSAGE : 
+
+Value of '1/1/0001 12:00:00 AM' is not valid for 'Value'. 'Value' should be between 'MinDate' and 'MaxDate'.
+Parameter name: Value
+
+Stack Trace:
+
+   at System.Windows.Forms.DateTimePicker.set_Value(DateTime value)
+   at PayrollerManager.frmUsersDetails.GetGeneralDetails(Int32 userid) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmUsersDetails.cs:line 141
+
+Source : 
+
+System.Windows.Forms
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+22/12/2020 6:23:03 PM
+
+MESSAGE : 
+
+Value of '1/1/0001 12:00:00 AM' is not valid for 'Value'. 'Value' should be between 'MinDate' and 'MaxDate'.
+Parameter name: Value
+
+Stack Trace:
+
+   at System.Windows.Forms.DateTimePicker.set_Value(DateTime value)
+   at PayrollerManager.frmUsersDetails.GetGeneralDetails(Int32 userid) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmUsersDetails.cs:line 141
+
+Source : 
+
+System.Windows.Forms
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+22/12/2020 8:44:35 PM
+
+MESSAGE : 
+
+Value of '1/1/0001 12:00:00 AM' is not valid for 'Value'. 'Value' should be between 'MinDate' and 'MaxDate'.
+Parameter name: Value
+
+Stack Trace:
+
+   at System.Windows.Forms.DateTimePicker.set_Value(DateTime value)
+   at PayrollerManager.frmUsersDetails.GetGeneralDetails(Int32 userid) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmUsersDetails.cs:line 141
+
+Source : 
+
+System.Windows.Forms
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************

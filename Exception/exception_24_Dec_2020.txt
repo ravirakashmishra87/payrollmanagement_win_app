@@ -1,0 +1,26 @@
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+24/12/2020 8:40:56 AM
+
+MESSAGE : 
+
+Column named REFNO cannot be found.
+Parameter name: columnName
+
+Stack Trace:
+
+   at System.Windows.Forms.DataGridViewCellCollection.get_Item(String columnName)
+   at PayrollerManager.frmUserSalaryList.FillGrid() in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmUserSalaryList.cs:line 129
+
+Source : 
+
+System.Windows.Forms
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************
