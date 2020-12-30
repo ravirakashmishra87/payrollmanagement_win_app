@@ -112,13 +112,22 @@ namespace PayrollerManager
             return userdetails;
         }
        
-        public static string SaveDocument(string sourcefile,string doctype,int userid)
+        public static string SaveDocument(string sourcefile,string doctype,string employeecode)
         {
             string ext = Path.GetExtension(sourcefile);
-            string filename = $"{userid}_{doctype}{ext}";
+            string filename = $"{employeecode}_{doctype}{ext}";
             File.Copy(sourcefile, $"{documentfilePath}{filename}",true);
 
             return $"{documentfilePath}{filename}";
+        }
+
+        public static void DeleteDocuments(string employeecode)
+        {
+            string[] docs = Directory.GetFiles(documentfilePath, $"*{employeecode}*");
+            foreach (string file in docs)
+            {
+                File.Delete(file);
+            }
         }
 
         public static string GetDocumenTemplate(string doctype)

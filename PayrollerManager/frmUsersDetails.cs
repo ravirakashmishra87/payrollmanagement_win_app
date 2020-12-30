@@ -143,8 +143,8 @@ namespace PayrollerManager
                 txtEmployerPF.Text = Convert.ToString(objuserdetails.EMPLOYER_PF);
                 txtEmployerESIC.Text = Convert.ToString(objuserdetails.EMPLOYER_ESIC);
                 txtTotalCTC.Text = Convert.ToString(objuserdetails.TOTAL_CTC);
-                txtAdmnChrgs.Text = Convert.ToString(objuserdetails.ADMN_CHRGS);
-                txtGrandTotal.Text = Convert.ToString(objuserdetails.GRAND_TOTAL);
+                //txtAdmnChrgs.Text = Convert.ToString(objuserdetails.ADMN_CHRGS);
+                //txtGrandTotal.Text = Convert.ToString(objuserdetails.GRAND_TOTAL);
 
             }
             catch (Exception ex)
@@ -285,8 +285,8 @@ namespace PayrollerManager
                 objuserdetails.EMPLOYER_PF = Convert.ToDecimal(txtEmployerPF.Text);
                 objuserdetails.EMPLOYER_ESIC = Convert.ToDecimal(txtEmployerESIC.Text);
                 objuserdetails.TOTAL_CTC = Convert.ToDecimal(txtTotalCTC.Text);
-                objuserdetails.ADMN_CHRGS = Convert.ToDecimal(txtAdmnChrgs.Text);
-                objuserdetails.GRAND_TOTAL = Convert.ToDecimal(txtGrandTotal.Text);
+                //objuserdetails.ADMN_CHRGS = Convert.ToDecimal(txtAdmnChrgs.Text);
+                //objuserdetails.GRAND_TOTAL = Convert.ToDecimal(txtGrandTotal.Text);
                 SaveDocuments(objuserdetails);
 
                 if (!MODIFYMODE)
@@ -327,7 +327,7 @@ namespace PayrollerManager
                 if (!string.IsNullOrEmpty(lblResumePath.Text))
                 {
                     if (user.RESUME != lblResumePath.Text)
-                        user.RESUME = entity.SaveDocument(lblResumePath.Text, "resume", user.EMPLOYEEIID);
+                        user.RESUME = entity.SaveDocument(lblResumePath.Text, "resume", user.EMPLOYEECODE);
                 }
                 else
                 {
@@ -336,7 +336,7 @@ namespace PayrollerManager
                 if (pbPhoto.Image != null)
                 {
                     if(user.PHOTO != pbPhoto.ImageLocation)
-                    user.PHOTO = entity.SaveDocument(pbPhoto.ImageLocation, "photo", user.EMPLOYEEIID);
+                    user.PHOTO = entity.SaveDocument(pbPhoto.ImageLocation, "photo", user.EMPLOYEECODE);
                 }
                 else
                 { user.PHOTO = string.Empty; }
@@ -344,7 +344,7 @@ namespace PayrollerManager
                 if (PBAdharFront.Image != null)
                 {
                     if(user.UAD_FRONT != PBAdharFront.ImageLocation)
-                    user.UAD_FRONT = entity.SaveDocument(PBAdharFront.ImageLocation, "uidfront", user.EMPLOYEEIID);
+                    user.UAD_FRONT = entity.SaveDocument(PBAdharFront.ImageLocation, "uidfront", user.EMPLOYEECODE);
                 }
                 else
                 { user.UAD_FRONT = string.Empty; }
@@ -352,7 +352,7 @@ namespace PayrollerManager
                 if (pbAadharBack.Image != null)
                 {
                     if (user.UAD_BACK != pbAadharBack.ImageLocation)
-                        user.UAD_BACK = entity.SaveDocument(pbAadharBack.ImageLocation, "uidback", user.EMPLOYEEIID);
+                        user.UAD_BACK = entity.SaveDocument(pbAadharBack.ImageLocation, "uidback", user.EMPLOYEECODE);
                 }
                 else
                 { user.UAD_BACK = string.Empty; }
@@ -360,7 +360,7 @@ namespace PayrollerManager
                 if (pbPAN.Image != null)
                 {
                     if (user.PAN != pbPAN.ImageLocation)
-                        user.PAN = entity.SaveDocument(pbPAN.ImageLocation, "pan", user.EMPLOYEEIID);
+                        user.PAN = entity.SaveDocument(pbPAN.ImageLocation, "pan", user.EMPLOYEECODE);
                 }
                 else
                 { user.PAN = string.Empty; }
@@ -368,7 +368,7 @@ namespace PayrollerManager
                 if (pbPassbook.Image != null)
                 {
                     if (user.PASSBOOK != pbPassbook.ImageLocation)
-                        user.PASSBOOK = entity.SaveDocument(pbPassbook.ImageLocation, "passbook", user.EMPLOYEEIID);
+                        user.PASSBOOK = entity.SaveDocument(pbPassbook.ImageLocation, "passbook", user.EMPLOYEECODE);
                 }
                 else
                 { user.PASSBOOK = string.Empty; }
@@ -476,7 +476,7 @@ namespace PayrollerManager
                     decimal totalearning = user.BASIC + user.HRA + user.CONV + user.ALLOWANCE;
                     decimal totaldeduction = user.EMPLOYEE_PF + user.EMPLOYEE_ESIC + user.EMPLOYEE_PT;
                     decimal totalSalary = totalearning - totaldeduction;
-                    htmlString = string.Format(TxtHtmlCode, $"{ DateTime.Now.ToMonthName()}_{ DateTime.Now.Year}", user.EMPLOYEECODE, user.PANNO, employeename, user.UANNO, user.AADHARNO, user.ESICNO, user.LOCATION,
+                    htmlString = string.Format(TxtHtmlCode, $"{ DateTime.Now.ToMonthName()}-{ DateTime.Now.Year}", user.EMPLOYEECODE, user.PANNO, employeename, user.UANNO, user.AADHARNO, user.ESICNO, user.LOCATION,
                         user.DOJ.ToString("dd-MMM-yyyy"), user.BASIC, user.EMPLOYEE_PF, user.HRA, user.EMPLOYEE_ESIC, user.CONV, user.EMPLOYEE_PT, user.ALLOWANCE,
                         totalearning, totaldeduction, totalSalary);
                 }

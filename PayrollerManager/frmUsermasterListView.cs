@@ -333,15 +333,16 @@ namespace PayrollerManager
 
                     if (MessageBox.Show("Really want to delete this record?", "Employee Management", MessageBoxButtons.YesNo) == DialogResult.Yes)
                     {
-                        int userid = Convert.ToInt32(DGUsermaster.Rows[iRowIndex].Cells[0].Value.ToString());
-
+                        int employeeid = Convert.ToInt32(DGUsermaster.Rows[iRowIndex].Cells[0].Value.ToString());
+                        string employeecode = Convert.ToString(DGUsermaster.Rows[iRowIndex].Cells[1].Value);
                         //Userdetails user = userdetailslist.FirstOrDefault(u => u.EMPLOYEEIID == userid);
-                        bool isDeleted = userdetailslist.Remove(userdetailslist.FirstOrDefault(u => u.EMPLOYEEIID == userid));
-                       // user.STATUS = "INACTIVE";
-                        entity.SaveEmployeeData(userdetailslist);
-
+                        // bool isDeleted = userdetailslist.Remove(userdetailslist.FirstOrDefault(u => u.EMPLOYEEIID == employeeid));
+                        // user.STATUS = "INACTIVE";
+                        // entity.SaveEmployeeData(userdetailslist);
+                        bool isDeleted = true;
                         if (isDeleted)
                         {
+                            entity.DeleteDocuments(employeecode);
                             this.Cursor = Cursors.Default;
                             MessageBox.Show("Record deleted successfully", "Employee Management", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             FillGrid();

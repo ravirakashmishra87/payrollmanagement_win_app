@@ -30,8 +30,8 @@ namespace DataAccess.Models
         public decimal EMPLOYER_PF { get; set; }
         public decimal EMPLOYER_ESIC { get; set; }
         public decimal TOTAL_CTC { get; set; }
-        public decimal ADMN_CHRGS { get; set; }
-        public decimal GRAND_TOTAL { get; set; }
+        //public decimal ADMN_CHRGS { get; set; }
+        //public decimal GRAND_TOTAL { get; set; }
         public string REMARKS { get; set; }
         public DateTime CREATEDDATE { get; set; }
         public DateTime MODIFIEDDATE { get; set; }
