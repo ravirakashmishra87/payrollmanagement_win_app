@@ -174,9 +174,10 @@ namespace PayrollerManager
                 frmUsersDetails objUnitDetails = new frmUsersDetails(userdetailslist);
                 objUnitDetails.LOGINID = LOGINID;
                 objUnitDetails.LOGGEDINUSERID = LOGGEDINUSERID;
-                // objUnitDetails.ListView = this;
+                objUnitDetails.ListView = this;
                 objUnitDetails.MODIFYMODE = false;
-                objUnitDetails.ShowDialog();
+                objUnitDetails.MdiParent = this.MdiParent;
+                objUnitDetails.Show();
                 this.Cursor = Cursors.Default;
             }
             catch (Exception ex)
@@ -240,7 +241,8 @@ namespace PayrollerManager
                         objfrmUnitmaster.GetGeneralDetails(IID);
                         objfrmUnitmaster.LOGINID = LOGINID;
                         objfrmUnitmaster.LOGGEDINUSERID = LOGGEDINUSERID;
-                        objfrmUnitmaster.ShowDialog();
+                        objfrmUnitmaster.MdiParent = this.MdiParent;
+                        objfrmUnitmaster.Show();
                     }
                 }
                 this.Cursor = Cursors.Default;

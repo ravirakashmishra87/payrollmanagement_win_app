@@ -238,7 +238,8 @@ namespace PayrollerManager
                         objsalaryDetails.EMPLOYEECODE = employeecode;
                         objsalaryDetails.employeeSalaryModelList = employeesalarylist;                        
                         objsalaryDetails.MODIFYMODE = false;
-                        objsalaryDetails.ShowDialog();
+                        objsalaryDetails.MdiParent = this.MdiParent;
+                        objsalaryDetails.Show();
                     }
                 }
                 this.Cursor = Cursors.Default;

@@ -240,3 +240,5 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/Data/Salary Slip/MARCH_2021/Salaryslip_EMP001_MAR_2021.pdf
+/Exception/exception_31_Dec_2020.txt
