@@ -387,7 +387,7 @@ namespace PayrollerManager
                         tomailid = Convert.ToString(DGUsermaster.Rows[irows].Cells["EMAILID"].Value);
                         salaryslipfile = $"{entity.SalarySlipPath}\\{foldername}\\Salaryslip_{DGUsermaster.Rows[irows].Cells["EMPLOYEECODE"].Value}_{foldername}.pdf";
                         emailsalaryslip(salaryslipfile, tomailid);
-                        Thread.Sleep(200);
+                        Thread.Sleep(200); 
                     }
                 }
                 this.Cursor = Cursors.Default;
