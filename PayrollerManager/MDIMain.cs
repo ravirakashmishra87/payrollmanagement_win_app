@@ -213,12 +213,26 @@ namespace PayrollerManager
 
         private void EmployeeSalaryMenu_Click(object sender, EventArgs e)
         {
-            frmUserSalaryList objMaster = new frmUserSalaryList();           
+            
+
+        }
+
+        private void salaryDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUserSalaryList objMaster = new frmUserSalaryList();
             objMaster.LOGINID = LOGINID;
             objMaster.LOGGEDINUSERID = USERID;
             objMaster.MdiParent = this;
             objMaster.Show();
+        }
 
+        private void emailSalarySlipToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGenerateSalary objMaster = new frmGenerateSalary();
+            objMaster.LOGINID = LOGINID;
+            objMaster.LOGGEDINUSERID = USERID;
+            objMaster.MdiParent = this;
+            objMaster.Show();
         }
     }
 }

@@ -46,6 +46,8 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.salaryDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emailSalarySlipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +114,9 @@
             // 
             // EmployeeSalaryMenu
             // 
+            this.EmployeeSalaryMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salaryDetailsToolStripMenuItem,
+            this.emailSalarySlipToolStripMenuItem});
             this.EmployeeSalaryMenu.Enabled = false;
             this.EmployeeSalaryMenu.Image = ((System.Drawing.Image)(resources.GetObject("EmployeeSalaryMenu.Image")));
             this.EmployeeSalaryMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -187,6 +192,20 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
             // 
+            // salaryDetailsToolStripMenuItem
+            // 
+            this.salaryDetailsToolStripMenuItem.Name = "salaryDetailsToolStripMenuItem";
+            this.salaryDetailsToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.salaryDetailsToolStripMenuItem.Text = "Salary details";
+            this.salaryDetailsToolStripMenuItem.Click += new System.EventHandler(this.salaryDetailsToolStripMenuItem_Click);
+            // 
+            // emailSalarySlipToolStripMenuItem
+            // 
+            this.emailSalarySlipToolStripMenuItem.Name = "emailSalarySlipToolStripMenuItem";
+            this.emailSalarySlipToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.emailSalarySlipToolStripMenuItem.Text = "Email Salary slip";
+            this.emailSalarySlipToolStripMenuItem.Click += new System.EventHandler(this.emailSalarySlipToolStripMenuItem_Click);
+            // 
             // MDIMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +250,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem staffToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem EmployeeSalaryMenu;
+        private System.Windows.Forms.ToolStripMenuItem salaryDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem emailSalarySlipToolStripMenuItem;
     }
 }
 
