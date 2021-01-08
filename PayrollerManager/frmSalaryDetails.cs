@@ -85,8 +85,8 @@ namespace PayrollerManager
                 txtEmployerPF.Text = Convert.ToString(employeesalary.EMPLOYER_PF);
                 txtEmployerESIC.Text = Convert.ToString(employeesalary.EMPLOYER_ESIC);
                 txtTotalCTC.Text = Convert.ToString(employeesalary.TOTAL_CTC);
-                //txtAdmnChrgs.Text = Convert.ToString(employeesalary.ADMN_CHRGS);
-                //txtGrandTotal.Text = Convert.ToString(employeesalary.GRAND_TOTAL);
+                txtAdmnChrgs.Text = Convert.ToString(employeesalary.ADMN_CHRGS);
+                txtGrandTotal.Text = Convert.ToString(employeesalary.GRAND_TOTAL);
             }
             catch (Exception ex)
             {
@@ -132,8 +132,8 @@ namespace PayrollerManager
                 objemployeeSalarydetails.EMPLOYER_PF = Convert.ToDecimal(txtEmployerPF.Text);
                 objemployeeSalarydetails.EMPLOYER_ESIC = Convert.ToDecimal(txtEmployerESIC.Text);
                 objemployeeSalarydetails.TOTAL_CTC = Convert.ToDecimal(txtTotalCTC.Text);
-                //objemployeeSalarydetails.ADMN_CHRGS = Convert.ToDecimal(txtAdmnChrgs.Text);
-                //objemployeeSalarydetails.GRAND_TOTAL = Convert.ToDecimal(txtGrandTotal.Text);
+                objemployeeSalarydetails.ADMN_CHRGS = Convert.ToDecimal(txtAdmnChrgs.Text);
+                objemployeeSalarydetails.GRAND_TOTAL = Convert.ToDecimal(txtGrandTotal.Text);
                 objemployeeSalarydetails.REMARKS = rtbSalaryRemark.Text;
 
                 if (!MODIFYMODE)
@@ -240,8 +240,8 @@ namespace PayrollerManager
                     txtEmployerPF.Text = Convert.ToString(objemployeeSalarydetails.EMPLOYER_PF);
                     txtEmployerESIC.Text = Convert.ToString(objemployeeSalarydetails.EMPLOYER_ESIC);
                     txtTotalCTC.Text = Convert.ToString(objemployeeSalarydetails.TOTAL_CTC);
-                    //txtAdmnChrgs.Text = Convert.ToString(objemployeeSalarydetails.ADMN_CHRGS);
-                    //txtGrandTotal.Text = Convert.ToString(objemployeeSalarydetails.GRAND_TOTAL);
+                    txtAdmnChrgs.Text = Convert.ToString(objemployeeSalarydetails.ADMN_CHRGS);
+                    txtGrandTotal.Text = Convert.ToString(objemployeeSalarydetails.GRAND_TOTAL);
                     rtbSalaryRemark.Text = objemployeeSalarydetails.REMARKS;
                     dtpSalaryPeriod.Value = objemployeeSalarydetails.PERIOD;
                 }
@@ -275,8 +275,8 @@ namespace PayrollerManager
             txtEmployerPF.Text = Convert.ToString(employeesalary.EMPLOYER_PF);
             txtEmployerESIC.Text = Convert.ToString(employeesalary.EMPLOYER_ESIC);
             txtTotalCTC.Text = Convert.ToString(employeesalary.TOTAL_CTC);
-            //txtAdmnChrgs.Text = Convert.ToString(employeesalary.ADMN_CHRGS);
-            //txtGrandTotal.Text = Convert.ToString(employeesalary.GRAND_TOTAL);
+            txtAdmnChrgs.Text = Convert.ToString(employeesalary.ADMN_CHRGS);
+            txtGrandTotal.Text = Convert.ToString(employeesalary.GRAND_TOTAL);
         }
 
         private void btnModify_Click(object sender, EventArgs e)

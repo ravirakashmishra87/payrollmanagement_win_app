@@ -76,7 +76,7 @@
             this.btnRefresh});
             this.TSFixingMaster.Location = new System.Drawing.Point(0, 0);
             this.TSFixingMaster.Name = "TSFixingMaster";
-            this.TSFixingMaster.Size = new System.Drawing.Size(1223, 38);
+            this.TSFixingMaster.Size = new System.Drawing.Size(1048, 38);
             this.TSFixingMaster.TabIndex = 36;
             this.TSFixingMaster.Text = "toolStrip1";
             // 
@@ -156,12 +156,12 @@
             this.CONTACTNO,
             this.AADHAR});
             this.DGUsermaster.Cursor = System.Windows.Forms.Cursors.Default;
-            this.DGUsermaster.Location = new System.Drawing.Point(6, 44);
+            this.DGUsermaster.Location = new System.Drawing.Point(5, 38);
             this.DGUsermaster.MultiSelect = false;
             this.DGUsermaster.Name = "DGUsermaster";
             this.DGUsermaster.ReadOnly = true;
             this.DGUsermaster.RowHeadersWidth = 21;
-            this.DGUsermaster.Size = new System.Drawing.Size(1209, 426);
+            this.DGUsermaster.Size = new System.Drawing.Size(1036, 329);
             this.DGUsermaster.TabIndex = 34;
             this.DGUsermaster.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGUnitmasterlistview_CellClick);
             this.DGUsermaster.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGUnitmasterlistview_CellDoubleClick);
@@ -228,9 +228,9 @@
             this.grpSearch.Controls.Add(this.txtFilterText);
             this.grpSearch.Controls.Add(this.txtSearchText);
             this.grpSearch.Controls.Add(this.DBSearchText);
-            this.grpSearch.Location = new System.Drawing.Point(2, 475);
+            this.grpSearch.Location = new System.Drawing.Point(2, 372);
             this.grpSearch.Name = "grpSearch";
-            this.grpSearch.Size = new System.Drawing.Size(1212, 93);
+            this.grpSearch.Size = new System.Drawing.Size(1039, 81);
             this.grpSearch.TabIndex = 35;
             this.grpSearch.TabStop = false;
             // 
@@ -239,7 +239,7 @@
             this.lblSearchColumn.AutoSize = true;
             this.lblSearchColumn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchColumn.ForeColor = System.Drawing.Color.Blue;
-            this.lblSearchColumn.Location = new System.Drawing.Point(413, 23);
+            this.lblSearchColumn.Location = new System.Drawing.Point(354, 20);
             this.lblSearchColumn.Name = "lblSearchColumn";
             this.lblSearchColumn.Size = new System.Drawing.Size(0, 13);
             this.lblSearchColumn.TabIndex = 42;
@@ -250,9 +250,9 @@
             this.btnFindNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFindNext.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnFindNext.Image = ((System.Drawing.Image)(resources.GetObject("btnFindNext.Image")));
-            this.btnFindNext.Location = new System.Drawing.Point(346, 23);
+            this.btnFindNext.Location = new System.Drawing.Point(297, 20);
             this.btnFindNext.Name = "btnFindNext";
-            this.btnFindNext.Size = new System.Drawing.Size(31, 27);
+            this.btnFindNext.Size = new System.Drawing.Size(27, 23);
             this.btnFindNext.TabIndex = 20;
             this.btnFindNext.UseVisualStyleBackColor = true;
             this.btnFindNext.Click += new System.EventHandler(this.btnFindNext_Click);
@@ -263,9 +263,9 @@
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
-            this.btnReset.Location = new System.Drawing.Point(386, 58);
+            this.btnReset.Location = new System.Drawing.Point(331, 50);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(27, 27);
+            this.btnReset.Size = new System.Drawing.Size(23, 23);
             this.btnReset.TabIndex = 11;
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Visible = false;
@@ -276,9 +276,9 @@
             this.btnApplyFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnApplyFilter.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnApplyFilter.Image = ((System.Drawing.Image)(resources.GetObject("btnApplyFilter.Image")));
-            this.btnApplyFilter.Location = new System.Drawing.Point(346, 58);
+            this.btnApplyFilter.Location = new System.Drawing.Point(297, 50);
             this.btnApplyFilter.Name = "btnApplyFilter";
-            this.btnApplyFilter.Size = new System.Drawing.Size(31, 27);
+            this.btnApplyFilter.Size = new System.Drawing.Size(27, 23);
             this.btnApplyFilter.TabIndex = 10;
             this.btnApplyFilter.UseVisualStyleBackColor = true;
             this.btnApplyFilter.Visible = false;
@@ -286,47 +286,47 @@
             // DBFilterText
             // 
             this.DBFilterText.AutoSize = true;
-            this.DBFilterText.Location = new System.Drawing.Point(14, 61);
+            this.DBFilterText.Location = new System.Drawing.Point(12, 53);
             this.DBFilterText.Name = "DBFilterText";
-            this.DBFilterText.Size = new System.Drawing.Size(63, 15);
+            this.DBFilterText.Size = new System.Drawing.Size(56, 13);
             this.DBFilterText.TabIndex = 9;
             this.DBFilterText.Text = "Filter Text:";
             this.DBFilterText.Visible = false;
             // 
             // txtFilterText
             // 
-            this.txtFilterText.Location = new System.Drawing.Point(99, 58);
+            this.txtFilterText.Location = new System.Drawing.Point(85, 50);
             this.txtFilterText.Name = "txtFilterText";
-            this.txtFilterText.Size = new System.Drawing.Size(240, 21);
+            this.txtFilterText.Size = new System.Drawing.Size(206, 20);
             this.txtFilterText.TabIndex = 8;
             this.txtFilterText.Visible = false;
             // 
             // txtSearchText
             // 
-            this.txtSearchText.Location = new System.Drawing.Point(99, 23);
+            this.txtSearchText.Location = new System.Drawing.Point(85, 20);
             this.txtSearchText.Name = "txtSearchText";
-            this.txtSearchText.Size = new System.Drawing.Size(240, 21);
+            this.txtSearchText.Size = new System.Drawing.Size(206, 20);
             this.txtSearchText.TabIndex = 7;
             this.txtSearchText.TextChanged += new System.EventHandler(this.txtSearchText_TextChanged);
             // 
             // DBSearchText
             // 
             this.DBSearchText.AutoSize = true;
-            this.DBSearchText.Location = new System.Drawing.Point(14, 28);
+            this.DBSearchText.Location = new System.Drawing.Point(12, 24);
             this.DBSearchText.Name = "DBSearchText";
-            this.DBSearchText.Size = new System.Drawing.Size(75, 15);
+            this.DBSearchText.Size = new System.Drawing.Size(68, 13);
             this.DBSearchText.TabIndex = 6;
             this.DBSearchText.Text = "Search Text:";
             // 
             // frmUserSalaryList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1223, 578);
+            this.ClientSize = new System.Drawing.Size(1048, 461);
             this.Controls.Add(this.TSFixingMaster);
             this.Controls.Add(this.DGUsermaster);
             this.Controls.Add(this.grpSearch);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmUserSalaryList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

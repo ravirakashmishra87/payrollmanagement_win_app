@@ -21,7 +21,17 @@ namespace PayrollerManager
         public static readonly string SalarySlipPath = ConfigurationManager.AppSettings["SalarySlipPath"];
         public static readonly string SalarySlipFormat = ConfigurationManager.AppSettings["SalarySlipFormat"];
         public static readonly string BaseUrlPath = ConfigurationManager.AppSettings["BaseUrlPath"];
-        
+
+        //Mail configuration
+        public static readonly string Host = ConfigurationManager.AppSettings["Host"];
+        public static readonly string Port = ConfigurationManager.AppSettings["Port"];
+        public static readonly string Frommail = ConfigurationManager.AppSettings["Mailfrom"];
+        public static readonly string Displayname = ConfigurationManager.AppSettings["Displayname"];
+        public static readonly string Password = ConfigurationManager.AppSettings["Password"];
+
+        public static readonly string Department = ConfigurationManager.AppSettings["Department"];
+        public static readonly string ServiceStatus = ConfigurationManager.AppSettings["ServiceStatus"];
+
         public static List<employeeDetailsModel> GetAllEmployeeData()
         {
             List<employeeDetailsModel> userdetailslist = new List<employeeDetailsModel>();
@@ -167,6 +177,18 @@ namespace PayrollerManager
             employeeSalaryDetailsModel destination = iMapper.Map<employeeDetailsModel, employeeSalaryDetailsModel>(userdetails);
             return destination;
 
+        }
+
+        public static List<string> GetDetaprtment()
+        {
+            List<string> department = Department.Split('|').ToList();
+            return department;
+        }
+
+        public static List<string> GetServiceStatus()
+        {
+            List<string> servicestatus = ServiceStatus.Split('|').ToList();
+            return servicestatus;
         }
     }
 }

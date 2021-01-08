@@ -60,8 +60,16 @@ namespace PayrollerManager
         {
             try
             {
+               
+
                 if (!MODIFYMODE)
                 {
+                    ddlDepartment.DataSource = entity.GetDetaprtment();
+                    ddlDepartment.SelectedIndex = -1;
+
+                    ddlAttServiceStatus.DataSource = entity.GetServiceStatus();
+                    ddlAttServiceStatus.SelectedIndex = -1;
+
                     objuserdetails = new employeeDetailsModel();
                 }
                 else
@@ -81,6 +89,12 @@ namespace PayrollerManager
         {
             try
             {
+                ddlDepartment.DataSource = entity.GetDetaprtment();
+               // ddlDepartment.SelectedIndex = -1;
+
+                ddlAttServiceStatus.DataSource = entity.GetServiceStatus();
+               // ddlAttServiceStatus.SelectedIndex = -1;
+
                 SELECTEDEMPLOYEEIID = userid;
                 objuserdetails = userdetailslist.FirstOrDefault(u => u.EMPLOYEEIID == userid);
 
@@ -128,7 +142,7 @@ namespace PayrollerManager
                 lblResumePath.Text = objuserdetails.RESUME;
 
                 txtDays.Text = Convert.ToString(objuserdetails.DAYS);
-                txtDepartment.Text = objuserdetails.DEPARTMENT;
+                ddlDepartment.Text = objuserdetails.DEPARTMENT;
                 txtBasic.Text = Convert.ToString(objuserdetails.BASIC);
                 txtHRA.Text = Convert.ToString(objuserdetails.HRA);
                 txtAllowances.Text = Convert.ToString(objuserdetails.ALLOWANCE);
@@ -143,8 +157,8 @@ namespace PayrollerManager
                 txtEmployerPF.Text = Convert.ToString(objuserdetails.EMPLOYER_PF);
                 txtEmployerESIC.Text = Convert.ToString(objuserdetails.EMPLOYER_ESIC);
                 txtTotalCTC.Text = Convert.ToString(objuserdetails.TOTAL_CTC);
-                //txtAdmnChrgs.Text = Convert.ToString(objuserdetails.ADMN_CHRGS);
-                //txtGrandTotal.Text = Convert.ToString(objuserdetails.GRAND_TOTAL);
+                txtAdmnChrgs.Text = Convert.ToString(objuserdetails.ADMN_CHRGS);
+                txtGrandTotal.Text = Convert.ToString(objuserdetails.GRAND_TOTAL);
 
             }
             catch (Exception ex)
@@ -229,7 +243,6 @@ namespace PayrollerManager
                     userdetailslist = new List<employeeDetailsModel>();
                     objuserdetails.EMPLOYEEIID = 1;
                 }
-
                 //login details
                 objuserdetails.FNAME = txtFName.Text.Trim();
                 objuserdetails.LNAME = txtLName.Text.Trim();
@@ -270,7 +283,7 @@ namespace PayrollerManager
 
                 //Salary details
                 objuserdetails.DAYS = Convert.ToInt32(txtDays.Text);
-                objuserdetails.DEPARTMENT = txtDepartment.Text;
+                objuserdetails.DEPARTMENT = ddlDepartment.Text;
                 objuserdetails.BASIC = Convert.ToDecimal(txtBasic.Text);
                 objuserdetails.HRA = Convert.ToDecimal(txtHRA.Text);
                 objuserdetails.ALLOWANCE = Convert.ToDecimal(txtAllowances.Text);
@@ -285,8 +298,8 @@ namespace PayrollerManager
                 objuserdetails.EMPLOYER_PF = Convert.ToDecimal(txtEmployerPF.Text);
                 objuserdetails.EMPLOYER_ESIC = Convert.ToDecimal(txtEmployerESIC.Text);
                 objuserdetails.TOTAL_CTC = Convert.ToDecimal(txtTotalCTC.Text);
-                //objuserdetails.ADMN_CHRGS = Convert.ToDecimal(txtAdmnChrgs.Text);
-                //objuserdetails.GRAND_TOTAL = Convert.ToDecimal(txtGrandTotal.Text);
+                objuserdetails.ADMN_CHRGS = Convert.ToDecimal(txtAdmnChrgs.Text);
+                objuserdetails.GRAND_TOTAL = Convert.ToDecimal(txtGrandTotal.Text);
                 SaveDocuments(objuserdetails);
 
                 if (!MODIFYMODE)

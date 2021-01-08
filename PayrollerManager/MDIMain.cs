@@ -234,5 +234,10 @@ namespace PayrollerManager
             objMaster.MdiParent = this;
             objMaster.Show();
         }
+
+        private void menuReports_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

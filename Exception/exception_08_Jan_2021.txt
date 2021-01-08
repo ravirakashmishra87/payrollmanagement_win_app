@@ -1,0 +1,84 @@
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+8/1/2021 10:54:27 AM
+
+MESSAGE : 
+
+Service not available, closing transmission channel. The server response was: Cannot connect to SMTP server 0.0.2.75 (0.0.2.75:587), connect error 10051
+
+Stack Trace:
+
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at PayrollerManager.frmGenerateSalary.emailsalaryslip(String salaryslip, String toemailid, String salaryperiod, String employeename) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmGenerateSalary.cs:line 435
+
+Source : 
+
+System
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+8/1/2021 10:54:33 AM
+
+MESSAGE : 
+
+Service not available, closing transmission channel. The server response was: Cannot connect to SMTP server 0.0.2.75 (0.0.2.75:587), connect error 10051
+
+Stack Trace:
+
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at PayrollerManager.frmGenerateSalary.emailsalaryslip(String salaryslip, String toemailid, String salaryperiod, String employeename) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmGenerateSalary.cs:line 435
+
+Source : 
+
+System
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+8/1/2021 10:55:36 AM
+
+MESSAGE : 
+
+Service not available, closing transmission channel. The server response was: Cannot connect to SMTP server 0.0.2.75 (0.0.2.75:587), connect error 10051
+
+Stack Trace:
+
+   at System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at PayrollerManager.frmGenerateSalary.emailsalaryslip(String salaryslip, String toemailid, String salaryperiod, String employeename) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmGenerateSalary.cs:line 435
+
+Source : 
+
+System
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************

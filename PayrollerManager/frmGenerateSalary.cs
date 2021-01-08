@@ -13,6 +13,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//using Spire.Email;
+//using Spire.Email.IMap;
+//using Spire.Email.Smtp;
+
 namespace PayrollerManager
 {
     public partial class frmGenerateSalary : BaseForm
@@ -254,7 +258,7 @@ namespace PayrollerManager
                 this.Cursor = Cursors.Default;
                 MessageBox.Show("An Error has occurred. Contact Administrator. \nError - " + ex.Message, "Employee Management",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-               
+
                 exceptionlog.HandleException(ex);
             }
         }
@@ -374,8 +378,10 @@ namespace PayrollerManager
             try
             {
                 string foldername = $"{dtpSalaryperiod.Value.ToMonthName()}_{dtpSalaryperiod.Value.Year}";
+                string Salaryperiod = $"{dtpSalaryperiod.Value.ToMonthName()}-{dtpSalaryperiod.Value.Year}";
                 string salaryslipfile = string.Empty;
                 string tomailid = string.Empty;
+                string employeename = string.Empty;
                 this.Cursor = Cursors.WaitCursor;
                 for (int irows = 0; irows < DGUsermaster.Rows.Count; irows++)
                 {
@@ -383,11 +389,11 @@ namespace PayrollerManager
                     {
                         salaryslipfile = string.Empty;
                         tomailid = string.Empty;
-
+                        employeename = Convert.ToString(DGUsermaster.Rows[irows].Cells["EMPLOYEENAME"].Value);
                         tomailid = Convert.ToString(DGUsermaster.Rows[irows].Cells["EMAILID"].Value);
                         salaryslipfile = $"{entity.SalarySlipPath}\\{foldername}\\Salaryslip_{DGUsermaster.Rows[irows].Cells["EMPLOYEECODE"].Value}_{foldername}.pdf";
-                        emailsalaryslip(salaryslipfile, tomailid);
-                        Thread.Sleep(200); 
+                        emailsalaryslip(salaryslipfile, tomailid, Salaryperiod, employeename);
+                        Thread.Sleep(1000);
                     }
                 }
                 this.Cursor = Cursors.Default;
@@ -404,27 +410,30 @@ namespace PayrollerManager
             }
         }
 
-        private void emailsalaryslip(string salaryslip, string toemailid)
+        private void emailsalaryslip(string salaryslip, string toemailid, string salaryperiod, string employeename)
         {
             try
             {
-                MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-                mail.From = new MailAddress("raviprakashmishra87@gmail.com");
-                mail.To.Add(toemailid);
-                mail.Subject = "Test Mail - 1";
-                mail.Body = "mail with attachment";
+                if (File.Exists(salaryslip))
+                {
+                    MailMessage mail = new MailMessage();
 
-                System.Net.Mail.Attachment attachment;
-                attachment = new System.Net.Mail.Attachment(salaryslip);
-                mail.Attachments.Add(attachment);
+                    mail.From = new MailAddress(entity.Frommail,entity.Displayname);
+                    mail.To.Add(toemailid);
+                    mail.Subject = $"Salary slip for {salaryperiod}";
+                    mail.Body = $"Hi {employeename},\r\nPlease find the attachment of the salary slip for {salaryperiod}.\n\n\n\nRegards";
+                    
+                    SmtpClient SmtpServer = new SmtpClient(entity.Host);
+                    Attachment attachment = new Attachment(salaryslip);
+                    mail.Attachments.Add(attachment);
+                    
+                    SmtpServer.Port = Convert.ToInt32(entity.Port);
+                    SmtpServer.Credentials = new System.Net.NetworkCredential(entity.Frommail, entity.Password);
+                    SmtpServer.EnableSsl = true;
+                    SmtpServer.Send(mail);
+                }
 
-                SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("raviprakashmishra87@gmail.com", "Z#$NL!@#ravi");
-                SmtpServer.EnableSsl = true;
 
-                SmtpServer.Send(mail);
-                MessageBox.Show("mail Send");
             }
             catch (Exception ex)
             {

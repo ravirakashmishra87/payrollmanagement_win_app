@@ -58,9 +58,9 @@
             // 
             // btnSelect
             // 
-            this.btnSelect.Location = new System.Drawing.Point(377, 15);
+            this.btnSelect.Location = new System.Drawing.Point(323, 13);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(87, 27);
+            this.btnSelect.Size = new System.Drawing.Size(75, 23);
             this.btnSelect.TabIndex = 28;
             this.btnSelect.Text = "Select All";
             this.btnSelect.UseVisualStyleBackColor = true;
@@ -68,9 +68,11 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(909, 614);
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Location = new System.Drawing.Point(779, 427);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(125, 43);
+            this.btnClose.Size = new System.Drawing.Size(107, 37);
             this.btnClose.TabIndex = 27;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -78,9 +80,11 @@
             // 
             // btnSendMail
             // 
-            this.btnSendMail.Location = new System.Drawing.Point(765, 614);
+            this.btnSendMail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSendMail.Location = new System.Drawing.Point(656, 427);
             this.btnSendMail.Name = "btnSendMail";
-            this.btnSendMail.Size = new System.Drawing.Size(125, 43);
+            this.btnSendMail.Size = new System.Drawing.Size(107, 37);
             this.btnSendMail.TabIndex = 26;
             this.btnSendMail.Text = "Send Email";
             this.btnSendMail.UseVisualStyleBackColor = true;
@@ -88,9 +92,11 @@
             // 
             // btnGenerateSalary
             // 
-            this.btnGenerateSalary.Location = new System.Drawing.Point(621, 614);
+            this.btnGenerateSalary.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenerateSalary.Location = new System.Drawing.Point(532, 427);
             this.btnGenerateSalary.Name = "btnGenerateSalary";
-            this.btnGenerateSalary.Size = new System.Drawing.Size(125, 43);
+            this.btnGenerateSalary.Size = new System.Drawing.Size(107, 37);
             this.btnGenerateSalary.TabIndex = 25;
             this.btnGenerateSalary.Text = "Generate Salary";
             this.btnGenerateSalary.UseVisualStyleBackColor = true;
@@ -98,48 +104,56 @@
             // 
             // lblSearchColumn
             // 
+            this.lblSearchColumn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSearchColumn.AutoSize = true;
             this.lblSearchColumn.ForeColor = System.Drawing.Color.Blue;
-            this.lblSearchColumn.Location = new System.Drawing.Point(400, 621);
+            this.lblSearchColumn.Location = new System.Drawing.Point(343, 433);
             this.lblSearchColumn.Name = "lblSearchColumn";
-            this.lblSearchColumn.Size = new System.Drawing.Size(0, 15);
+            this.lblSearchColumn.Size = new System.Drawing.Size(0, 13);
             this.lblSearchColumn.TabIndex = 24;
             // 
             // btnFindNext
             // 
+            this.btnFindNext.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFindNext.FlatAppearance.BorderSize = 0;
             this.btnFindNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFindNext.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnFindNext.Image = ((System.Drawing.Image)(resources.GetObject("btnFindNext.Image")));
-            this.btnFindNext.Location = new System.Drawing.Point(344, 616);
+            this.btnFindNext.Location = new System.Drawing.Point(295, 429);
             this.btnFindNext.Name = "btnFindNext";
-            this.btnFindNext.Size = new System.Drawing.Size(36, 31);
+            this.btnFindNext.Size = new System.Drawing.Size(31, 27);
             this.btnFindNext.TabIndex = 23;
             this.btnFindNext.UseVisualStyleBackColor = true;
             // 
             // txtSearchText
             // 
-            this.txtSearchText.Location = new System.Drawing.Point(102, 621);
+            this.txtSearchText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearchText.Location = new System.Drawing.Point(87, 433);
             this.txtSearchText.Name = "txtSearchText";
-            this.txtSearchText.Size = new System.Drawing.Size(236, 21);
+            this.txtSearchText.Size = new System.Drawing.Size(203, 20);
             this.txtSearchText.TabIndex = 22;
             this.txtSearchText.TextChanged += new System.EventHandler(this.txtSearchText_TextChanged);
             // 
             // DBSearchText
             // 
+            this.DBSearchText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DBSearchText.AutoSize = true;
-            this.DBSearchText.Location = new System.Drawing.Point(21, 624);
+            this.DBSearchText.Location = new System.Drawing.Point(18, 436);
             this.DBSearchText.Name = "DBSearchText";
-            this.DBSearchText.Size = new System.Drawing.Size(75, 15);
+            this.DBSearchText.Size = new System.Drawing.Size(68, 13);
             this.DBSearchText.TabIndex = 21;
             this.DBSearchText.Text = "Search Text:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 15);
+            this.label1.Location = new System.Drawing.Point(18, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 15);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Salary Period";
             // 
@@ -148,24 +162,30 @@
             this.dtpSalaryperiod.Checked = false;
             this.dtpSalaryperiod.CustomFormat = "MMM-yyyy";
             this.dtpSalaryperiod.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpSalaryperiod.Location = new System.Drawing.Point(120, 15);
+            this.dtpSalaryperiod.Location = new System.Drawing.Point(103, 13);
             this.dtpSalaryperiod.Name = "dtpSalaryperiod";
             this.dtpSalaryperiod.ShowCheckBox = true;
-            this.dtpSalaryperiod.Size = new System.Drawing.Size(233, 21);
+            this.dtpSalaryperiod.Size = new System.Drawing.Size(200, 20);
             this.dtpSalaryperiod.TabIndex = 1;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.DGUsermaster);
-            this.groupBox1.Location = new System.Drawing.Point(14, 48);
+            this.groupBox1.Location = new System.Drawing.Point(12, 42);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1021, 560);
+            this.groupBox1.Size = new System.Drawing.Size(875, 378);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select Employee";
             // 
             // DGUsermaster
             // 
+            this.DGUsermaster.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DGUsermaster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGUsermaster.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SELECT,
@@ -173,9 +193,9 @@
             this.EMPLOYEECODE,
             this.EMPLOYEENAME,
             this.EMAILID});
-            this.DGUsermaster.Location = new System.Drawing.Point(7, 22);
+            this.DGUsermaster.Location = new System.Drawing.Point(6, 19);
             this.DGUsermaster.Name = "DGUsermaster";
-            this.DGUsermaster.Size = new System.Drawing.Size(1007, 531);
+            this.DGUsermaster.Size = new System.Drawing.Size(863, 346);
             this.DGUsermaster.TabIndex = 0;
             this.DGUsermaster.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGUsermaster_CellClick);
             // 
@@ -210,9 +230,9 @@
             // 
             // frmGenerateSalary
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 674);
+            this.ClientSize = new System.Drawing.Size(900, 471);
             this.ControlBox = false;
             this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.btnClose);
@@ -225,7 +245,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpSalaryperiod);
             this.Controls.Add(this.groupBox1);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "frmGenerateSalary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Email Salary Slip";
