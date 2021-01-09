@@ -337,11 +337,11 @@ namespace PayrollerManager
                     {
                         int employeeid = Convert.ToInt32(DGUsermaster.Rows[iRowIndex].Cells[0].Value.ToString());
                         string employeecode = Convert.ToString(DGUsermaster.Rows[iRowIndex].Cells[1].Value);
-                        //Userdetails user = userdetailslist.FirstOrDefault(u => u.EMPLOYEEIID == userid);
-                        // bool isDeleted = userdetailslist.Remove(userdetailslist.FirstOrDefault(u => u.EMPLOYEEIID == employeeid));
-                        // user.STATUS = "INACTIVE";
-                        // entity.SaveEmployeeData(userdetailslist);
-                        bool isDeleted = true;
+                        employeeDetailsModel user = userdetailslist.FirstOrDefault(u => u.EMPLOYEEIID == employeeid);
+                        bool isDeleted = userdetailslist.Remove(userdetailslist.FirstOrDefault(u => u.EMPLOYEEIID == employeeid));
+                        user.STATUS = "INACTIVE";
+                        entity.SaveEmployeeData(userdetailslist);
+                        
                         if (isDeleted)
                         {
                             entity.DeleteDocuments(employeecode);
