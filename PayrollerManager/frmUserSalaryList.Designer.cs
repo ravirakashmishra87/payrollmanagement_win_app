@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserSalaryList));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tmr_Search = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.TSFixingMaster = new System.Windows.Forms.ToolStrip();
@@ -48,6 +50,7 @@
             this.CONTACTNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AADHAR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpSearch = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblSearchColumn = new System.Windows.Forms.Label();
             this.btnFindNext = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
@@ -146,6 +149,14 @@
             this.DGUsermaster.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGUsermaster.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGUsermaster.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGUsermaster.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.USERIID,
@@ -156,12 +167,20 @@
             this.CONTACTNO,
             this.AADHAR});
             this.DGUsermaster.Cursor = System.Windows.Forms.Cursors.Default;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGUsermaster.DefaultCellStyle = dataGridViewCellStyle2;
             this.DGUsermaster.Location = new System.Drawing.Point(5, 38);
             this.DGUsermaster.MultiSelect = false;
             this.DGUsermaster.Name = "DGUsermaster";
             this.DGUsermaster.ReadOnly = true;
             this.DGUsermaster.RowHeadersWidth = 21;
-            this.DGUsermaster.Size = new System.Drawing.Size(1036, 329);
+            this.DGUsermaster.Size = new System.Drawing.Size(1036, 414);
             this.DGUsermaster.TabIndex = 34;
             this.DGUsermaster.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGUnitmasterlistview_CellClick);
             this.DGUsermaster.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGUnitmasterlistview_CellDoubleClick);
@@ -220,6 +239,7 @@
             this.grpSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpSearch.BackColor = System.Drawing.Color.Transparent;
+            this.grpSearch.Controls.Add(this.button1);
             this.grpSearch.Controls.Add(this.lblSearchColumn);
             this.grpSearch.Controls.Add(this.btnFindNext);
             this.grpSearch.Controls.Add(this.btnReset);
@@ -228,11 +248,22 @@
             this.grpSearch.Controls.Add(this.txtFilterText);
             this.grpSearch.Controls.Add(this.txtSearchText);
             this.grpSearch.Controls.Add(this.DBSearchText);
-            this.grpSearch.Location = new System.Drawing.Point(2, 372);
+            this.grpSearch.Location = new System.Drawing.Point(2, 457);
             this.grpSearch.Name = "grpSearch";
             this.grpSearch.Size = new System.Drawing.Size(1039, 81);
             this.grpSearch.TabIndex = 35;
             this.grpSearch.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(925, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 37);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblSearchColumn
             // 
@@ -322,7 +353,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 461);
+            this.ClientSize = new System.Drawing.Size(1048, 546);
+            this.ControlBox = false;
             this.Controls.Add(this.TSFixingMaster);
             this.Controls.Add(this.DGUsermaster);
             this.Controls.Add(this.grpSearch);
@@ -370,5 +402,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DEPARTMENT;
         private System.Windows.Forms.DataGridViewTextBoxColumn CONTACTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn AADHAR;
+        private System.Windows.Forms.Button button1;
     }
 }

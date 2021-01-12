@@ -57,6 +57,7 @@
             this.txtFilterText = new System.Windows.Forms.TextBox();
             this.txtSearchText = new System.Windows.Forms.TextBox();
             this.DBSearchText = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.TSFixingMaster.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGUsermaster)).BeginInit();
             this.grpSearch.SuspendLayout();
@@ -227,6 +228,7 @@
             this.grpSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpSearch.BackColor = System.Drawing.Color.Transparent;
+            this.grpSearch.Controls.Add(this.button1);
             this.grpSearch.Controls.Add(this.lblSearchColumn);
             this.grpSearch.Controls.Add(this.btnFindNext);
             this.grpSearch.Controls.Add(this.btnReset);
@@ -325,11 +327,23 @@
             this.DBSearchText.TabIndex = 6;
             this.DBSearchText.Text = "Search Text:";
             // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(1092, 42);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(98, 37);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmUsermasterListView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1223, 578);
+            this.ControlBox = false;
             this.Controls.Add(this.TSFixingMaster);
             this.Controls.Add(this.DGUsermaster);
             this.Controls.Add(this.grpSearch);
@@ -378,5 +392,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn USERTYPE;
         private System.Windows.Forms.DataGridViewTextBoxColumn CONTACTNO;
         private System.Windows.Forms.DataGridViewTextBoxColumn AADHAR;
+        private System.Windows.Forms.Button button1;
     }
 }

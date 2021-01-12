@@ -1,0 +1,55 @@
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+11/1/2021 4:24:40 PM
+
+MESSAGE : 
+
+Input string was not in a correct format.
+
+Stack Trace:
+
+   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.Convert.ToInt32(String value)
+   at PayrollerManager.frmUsersDetails.btnSave_Click(Object sender, EventArgs e) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmUsersDetails.cs:line 285
+
+Source : 
+
+mscorlib
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************
+
+************************************** Exception Log Start **************************************
+
+****************************************************************************************************
+
+DATE : 
+
+11/1/2021 4:25:03 PM
+
+MESSAGE : 
+
+Could not find file 'resume'.
+
+Stack Trace:
+
+   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   at System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   at PayrollerManager.entity.SaveDocument(String sourcefile, String doctype, String employeecode) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\entity.cs:line 129
+   at PayrollerManager.frmUsersDetails.SaveDocuments(employeeDetailsModel user) in D:\Ravi\Personal\MCG\PayrollerManager\PayrollerManager\frmUsersDetails.cs:line 343
+
+Source : 
+
+mscorlib
+
+************************************** Exception Log End **************************************
+
+****************************************************************************************************

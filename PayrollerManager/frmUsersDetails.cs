@@ -49,7 +49,7 @@ namespace PayrollerManager
 
         public int LOGGEDINUSERID { get; set; }
         public String LOGINID { get; set; }
-        public Boolean MODIFYMODE { get; set; }        
+        public Boolean MODIFYMODE { get; set; }
         public Boolean DISPLAYMODE { get; set; }
         public int SELECTEDEMPLOYEEIID { get; set; }
 
@@ -60,7 +60,7 @@ namespace PayrollerManager
         {
             try
             {
-               
+
 
                 if (!MODIFYMODE)
                 {
@@ -90,10 +90,10 @@ namespace PayrollerManager
             try
             {
                 ddlDepartment.DataSource = entity.GetDetaprtment();
-               // ddlDepartment.SelectedIndex = -1;
+                // ddlDepartment.SelectedIndex = -1;
 
                 ddlAttServiceStatus.DataSource = entity.GetServiceStatus();
-               // ddlAttServiceStatus.SelectedIndex = -1;
+                // ddlAttServiceStatus.SelectedIndex = -1;
 
                 SELECTEDEMPLOYEEIID = userid;
                 objuserdetails = userdetailslist.FirstOrDefault(u => u.EMPLOYEEIID == userid);
@@ -216,7 +216,7 @@ namespace PayrollerManager
                     tabControl1.SelectedTab = tabControl1.TabPages[0];
                     MessageBox.Show("Please enter confirm password. ", "Employee Management",
                            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                   
+
                     txtConfirmPwd.Focus();
                     return;
                 }
@@ -236,13 +236,29 @@ namespace PayrollerManager
                     txtDesignation.Focus();
                     return;
                 }
-                this.Cursor = Cursors.WaitCursor;
+
+
+
 
                 if (userdetailslist == null)
                 {
                     userdetailslist = new List<employeeDetailsModel>();
                     objuserdetails.EMPLOYEEIID = 1;
                 }
+
+                if (!MODIFYMODE)
+                {
+                    if (userdetailslist.Any(u => u.EMPLOYEECODE.Equals(txtEmployeeCode.Text)))
+                    {
+                        tabControl1.SelectedTab = tabControl1.TabPages[0];
+                        MessageBox.Show("Employee code already exist. ", "Employee Management",
+                               MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtEmployeeCode.Focus();
+                        return;
+                    }
+                }
+
+                this.Cursor = Cursors.WaitCursor;
                 //login details
                 objuserdetails.FNAME = txtFName.Text.Trim();
                 objuserdetails.LNAME = txtLName.Text.Trim();
@@ -308,7 +324,7 @@ namespace PayrollerManager
                     int lastuserid = userdetailslist.Max(u => u.EMPLOYEEIID);
                     objuserdetails.EMPLOYEEIID = lastuserid + 1;
                     userdetailslist.Add(objuserdetails);
-                    
+
                 }
                 else
                 {
@@ -316,6 +332,7 @@ namespace PayrollerManager
                 }
 
                 entity.SaveEmployeeData(userdetailslist);
+                MODIFYMODE = true;
                 SELECTEDEMPLOYEEIID = objuserdetails.EMPLOYEEIID;
                 this.Cursor = Cursors.Default;
 
@@ -348,16 +365,16 @@ namespace PayrollerManager
                 }
                 if (pbPhoto.Image != null)
                 {
-                    if(user.PHOTO != pbPhoto.ImageLocation)
-                    user.PHOTO = entity.SaveDocument(pbPhoto.ImageLocation, "photo", user.EMPLOYEECODE);
+                    if (user.PHOTO != pbPhoto.ImageLocation)
+                        user.PHOTO = entity.SaveDocument(pbPhoto.ImageLocation, "photo", user.EMPLOYEECODE);
                 }
                 else
                 { user.PHOTO = string.Empty; }
 
                 if (PBAdharFront.Image != null)
                 {
-                    if(user.UAD_FRONT != PBAdharFront.ImageLocation)
-                    user.UAD_FRONT = entity.SaveDocument(PBAdharFront.ImageLocation, "uidfront", user.EMPLOYEECODE);
+                    if (user.UAD_FRONT != PBAdharFront.ImageLocation)
+                        user.UAD_FRONT = entity.SaveDocument(PBAdharFront.ImageLocation, "uidfront", user.EMPLOYEECODE);
                 }
                 else
                 { user.UAD_FRONT = string.Empty; }
@@ -550,7 +567,7 @@ namespace PayrollerManager
             {
                 this.Cursor = Cursors.Default;
                 MessageBox.Show("An Error has occurred. Contact Administrator. \nError - " + ex.Message, "Employee Management", MessageBoxButtons.OK, MessageBoxIcon.Error);
-               
+
                 exceptionlog.HandleException(ex);
             }
         }
@@ -572,7 +589,7 @@ namespace PayrollerManager
 
         private void btnSalarySlip_Click(object sender, EventArgs e)
         {
-            
+
             if (SELECTEDEMPLOYEEIID <= 0)
             {
 
@@ -586,6 +603,6 @@ namespace PayrollerManager
             this.Cursor = Cursors.Default;
         }
 
-       
+
     }
 }

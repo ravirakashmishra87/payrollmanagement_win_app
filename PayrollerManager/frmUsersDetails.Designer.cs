@@ -1069,9 +1069,8 @@
             this.lblResumePath.AutoSize = true;
             this.lblResumePath.Location = new System.Drawing.Point(146, 18);
             this.lblResumePath.Name = "lblResumePath";
-            this.lblResumePath.Size = new System.Drawing.Size(41, 13);
+            this.lblResumePath.Size = new System.Drawing.Size(0, 13);
             this.lblResumePath.TabIndex = 13;
-            this.lblResumePath.Text = "resume";
             // 
             // pbPassbook
             // 
@@ -1223,6 +1222,7 @@
             this.txtTotalSalary.Name = "txtTotalSalary";
             this.txtTotalSalary.Size = new System.Drawing.Size(218, 20);
             this.txtTotalSalary.TabIndex = 8;
+            this.txtTotalSalary.Text = "0";
             // 
             // txtNetSalary
             // 
@@ -1230,6 +1230,7 @@
             this.txtNetSalary.Name = "txtNetSalary";
             this.txtNetSalary.Size = new System.Drawing.Size(218, 20);
             this.txtNetSalary.TabIndex = 7;
+            this.txtNetSalary.Text = "0";
             // 
             // txtTotalCTC
             // 
@@ -1237,6 +1238,7 @@
             this.txtTotalCTC.Name = "txtTotalCTC";
             this.txtTotalCTC.Size = new System.Drawing.Size(218, 20);
             this.txtTotalCTC.TabIndex = 10;
+            this.txtTotalCTC.Text = "0";
             // 
             // txtGross
             // 
@@ -1244,6 +1246,7 @@
             this.txtGross.Name = "txtGross";
             this.txtGross.Size = new System.Drawing.Size(218, 20);
             this.txtGross.TabIndex = 5;
+            this.txtGross.Text = "0";
             // 
             // txtConv
             // 
@@ -1251,6 +1254,7 @@
             this.txtConv.Name = "txtConv";
             this.txtConv.Size = new System.Drawing.Size(218, 20);
             this.txtConv.TabIndex = 4;
+            this.txtConv.Text = "0";
             // 
             // txtAllowances
             // 
@@ -1258,6 +1262,7 @@
             this.txtAllowances.Name = "txtAllowances";
             this.txtAllowances.Size = new System.Drawing.Size(218, 20);
             this.txtAllowances.TabIndex = 3;
+            this.txtAllowances.Text = "0";
             // 
             // txtHRA
             // 
@@ -1265,6 +1270,7 @@
             this.txtHRA.Name = "txtHRA";
             this.txtHRA.Size = new System.Drawing.Size(218, 20);
             this.txtHRA.TabIndex = 2;
+            this.txtHRA.Text = "0";
             // 
             // txtBasic
             // 
@@ -1272,6 +1278,7 @@
             this.txtBasic.Name = "txtBasic";
             this.txtBasic.Size = new System.Drawing.Size(218, 20);
             this.txtBasic.TabIndex = 1;
+            this.txtBasic.Text = "0";
             // 
             // txtDays
             // 
@@ -1279,6 +1286,7 @@
             this.txtDays.Name = "txtDays";
             this.txtDays.Size = new System.Drawing.Size(218, 20);
             this.txtDays.TabIndex = 0;
+            this.txtDays.Text = "0";
             // 
             // groupBox2
             // 
@@ -1317,6 +1325,7 @@
             this.txtEmployerPF.Name = "txtEmployerPF";
             this.txtEmployerPF.Size = new System.Drawing.Size(218, 20);
             this.txtEmployerPF.TabIndex = 0;
+            this.txtEmployerPF.Text = "0";
             // 
             // txtEmployerESIC
             // 
@@ -1324,6 +1333,7 @@
             this.txtEmployerESIC.Name = "txtEmployerESIC";
             this.txtEmployerESIC.Size = new System.Drawing.Size(218, 20);
             this.txtEmployerESIC.TabIndex = 1;
+            this.txtEmployerESIC.Text = "0";
             // 
             // groupBox1
             // 
@@ -1384,6 +1394,7 @@
             this.txtEmployeePF.Name = "txtEmployeePF";
             this.txtEmployeePF.Size = new System.Drawing.Size(218, 20);
             this.txtEmployeePF.TabIndex = 0;
+            this.txtEmployeePF.Text = "0";
             // 
             // txtEmployeeESIC
             // 
@@ -1391,6 +1402,7 @@
             this.txtEmployeeESIC.Name = "txtEmployeeESIC";
             this.txtEmployeeESIC.Size = new System.Drawing.Size(218, 20);
             this.txtEmployeeESIC.TabIndex = 1;
+            this.txtEmployeeESIC.Text = "0";
             // 
             // txtEmployeePT
             // 
@@ -1398,6 +1410,7 @@
             this.txtEmployeePT.Name = "txtEmployeePT";
             this.txtEmployeePT.Size = new System.Drawing.Size(218, 20);
             this.txtEmployeePT.TabIndex = 2;
+            this.txtEmployeePT.Text = "0";
             // 
             // txtEmployeeDeduction
             // 
@@ -1405,6 +1418,7 @@
             this.txtEmployeeDeduction.Name = "txtEmployeeDeduction";
             this.txtEmployeeDeduction.Size = new System.Drawing.Size(218, 20);
             this.txtEmployeeDeduction.TabIndex = 3;
+            this.txtEmployeeDeduction.Text = "0";
             // 
             // label57
             // 

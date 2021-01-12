@@ -378,6 +378,8 @@ namespace PayrollerManager
             try
             {
                 string foldername = $"{dtpSalaryperiod.Value.ToMonthName()}_{dtpSalaryperiod.Value.Year}";
+                string periodname = $"{dtpSalaryperiod.Value.ToShortMonthName()}_{dtpSalaryperiod.Value.Year}";
+
                 string Salaryperiod = $"{dtpSalaryperiod.Value.ToMonthName()}-{dtpSalaryperiod.Value.Year}";
                 string salaryslipfile = string.Empty;
                 string tomailid = string.Empty;
@@ -391,7 +393,9 @@ namespace PayrollerManager
                         tomailid = string.Empty;
                         employeename = Convert.ToString(DGUsermaster.Rows[irows].Cells["EMPLOYEENAME"].Value);
                         tomailid = Convert.ToString(DGUsermaster.Rows[irows].Cells["EMAILID"].Value);
-                        salaryslipfile = $"{entity.SalarySlipPath}\\{foldername}\\Salaryslip_{DGUsermaster.Rows[irows].Cells["EMPLOYEECODE"].Value}_{foldername}.pdf";
+
+                        salaryslipfile = $"{entity.SalarySlipPath}\\{foldername}\\Salaryslip_{DGUsermaster.Rows[irows].Cells["EMPLOYEECODE"].Value}_{periodname}.pdf";
+
                         emailsalaryslip(salaryslipfile, tomailid, Salaryperiod, employeename);
                         Thread.Sleep(1000);
                     }
